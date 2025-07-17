@@ -1,0 +1,305 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* Pixel-perfect font styling */
+.pixel-font {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 10px;
+  line-height: 1.6;
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: none;
+  font-smoothing: none;
+}
+
+.pixel-font-large {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 16px;
+  line-height: 1.4;
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: none;
+  font-smoothing: none;
+}
+
+.pixel-font-xl {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 24px;
+  line-height: 1.2;
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: none;
+  font-smoothing: none;
+}
+
+/* Pixel-perfect rendering for all elements */
+* {
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+/* Custom pixel-style scrollbar */
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f0f23;
+  border: 2px solid #1a1a2e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4b5563;
+  border: 2px solid #6b7280;
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+
+/* Pixel-perfect canvas */
+canvas {
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  border: 4px solid #2d3748;
+  box-shadow: 
+    inset 0 0 0 2px #4a5568,
+    0 0 0 2px #1a202c,
+    8px 8px 0 0 #000000;
+}
+
+/* Retro button styling */
+.pixel-button {
+  background: linear-gradient(180deg, #4a5568 0%, #2d3748 100%);
+  border: 3px solid;
+  border-color: #718096 #2d3748 #2d3748 #718096;
+  color: #ffffff;
+  text-shadow: 1px 1px 0 #000000;
+  box-shadow: 
+    inset 1px 1px 0 #718096,
+    inset -1px -1px 0 #1a202c,
+    2px 2px 0 #000000;
+  transition: none;
+  cursor: pointer;
+}
+
+.pixel-button:hover {
+  background: linear-gradient(180deg, #5a6578 0%, #3d4758 100%);
+  transform: none;
+  box-shadow: 
+    inset 1px 1px 0 #828aa6,
+    inset -1px -1px 0 #2a303c,
+    2px 2px 0 #000000;
+}
+
+.pixel-button:active {
+  background: linear-gradient(180deg, #2d3748 0%, #4a5568 100%);
+  border-color: #2d3748 #718096 #718096 #2d3748;
+  box-shadow: 
+    inset -1px -1px 0 #718096,
+    inset 1px 1px 0 #1a202c,
+    1px 1px 0 #000000;
+  transform: translate(1px, 1px);
+}
+
+.pixel-button-green {
+  background: linear-gradient(180deg, #48bb78 0%, #38a169 100%);
+  border-color: #68d391 #2f855a #2f855a #68d391;
+}
+
+.pixel-button-green:hover {
+  background: linear-gradient(180deg, #58cb88 0%, #48bb78 100%);
+}
+
+.pixel-button-green:active {
+  background: linear-gradient(180deg, #38a169 0%, #48bb78 100%);
+  border-color: #2f855a #68d391 #68d391 #2f855a;
+}
+
+.pixel-button-red {
+  background: linear-gradient(180deg, #f56565 0%, #e53e3e 100%);
+  border-color: #fc8181 #c53030 #c53030 #fc8181;
+}
+
+.pixel-button-red:hover {
+  background: linear-gradient(180deg, #ff7575 0%, #f56565 100%);
+}
+
+.pixel-button-red:active {
+  background: linear-gradient(180deg, #e53e3e 0%, #f56565 100%);
+  border-color: #c53030 #fc8181 #fc8181 #c53030;
+}
+
+.pixel-button-yellow {
+  background: linear-gradient(180deg, #ecc94b 0%, #d69e2e 100%);
+  border-color: #f6e05e #b7791f #b7791f #f6e05e;
+  color: #1a202c;
+  text-shadow: 1px 1px 0 #ffffff;
+}
+
+.pixel-button-yellow:hover {
+  background: linear-gradient(180deg, #fcd95b 0%, #ecc94b 100%);
+}
+
+.pixel-button-yellow:active {
+  background: linear-gradient(180deg, #d69e2e 0%, #ecc94b 100%);
+  border-color: #b7791f #f6e05e #f6e05e #b7791f;
+}
+
+/* Pixel-style panels */
+.pixel-panel {
+  background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+  border: 4px solid;
+  border-color: #4a5568 #1a202c #1a202c #4a5568;
+  box-shadow: 
+    inset 2px 2px 0 #4a5568,
+    inset -2px -2px 0 #0d1117,
+    4px 4px 0 #000000;
+}
+
+.pixel-panel-inner {
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+  border: 2px solid;
+  border-color: #0d1117 #4a5568 #4a5568 #0d1117;
+  box-shadow: inset 1px 1px 0 #2d3748;
+}
+
+/* Health bar styling */
+.pixel-health-bar {
+  background: #1a202c;
+  border: 2px solid #4a5568;
+  box-shadow: inset 1px 1px 0 #0d1117;
+  overflow: hidden;
+}
+
+.pixel-health-fill {
+  background: linear-gradient(90deg, #48bb78 0%, #38a169 50%, #48bb78 100%);
+  border-right: 1px solid #2f855a;
+  box-shadow: inset 0 1px 0 #68d391;
+}
+
+.pixel-health-fill-warning {
+  background: linear-gradient(90deg, #ecc94b 0%, #d69e2e 50%, #ecc94b 100%);
+  border-right: 1px solid #b7791f;
+  box-shadow: inset 0 1px 0 #f6e05e;
+}
+
+.pixel-health-fill-danger {
+  background: linear-gradient(90deg, #f56565 0%, #e53e3e 50%, #f56565 100%);
+  border-right: 1px solid #c53030;
+  box-shadow: inset 0 1px 0 #fc8181;
+}
+
+/* Experience bar styling */
+.pixel-exp-bar {
+  background: #1a202c;
+  border: 2px solid #4a5568;
+  box-shadow: inset 1px 1px 0 #0d1117;
+  overflow: hidden;
+}
+
+.pixel-exp-fill {
+  background: linear-gradient(90deg, #9f7aea 0%, #805ad5 50%, #9f7aea 100%);
+  border-right: 1px solid #6b46c1;
+  box-shadow: inset 0 1px 0 #b794f6;
+}
+
+/* Game background */
+.game-background {
+  background: 
+    radial-gradient(circle at 25% 25%, #1a1a2e 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, #16213e 0%, transparent 50%),
+    linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+  min-height: 100vh;
+}
+
+/* Pixel-perfect text shadows */
+.pixel-text-shadow {
+  text-shadow: 
+    1px 0 0 #000000,
+    0 1px 0 #000000,
+    -1px 0 0 #000000,
+    0 -1px 0 #000000,
+    1px 1px 0 #000000,
+    -1px -1px 0 #000000,
+    1px -1px 0 #000000,
+    -1px 1px 0 #000000;
+}
+
+/* Retro glow effects */
+.pixel-glow-blue {
+  box-shadow: 
+    0 0 5px #4299e1,
+    0 0 10px #4299e1,
+    0 0 15px #4299e1,
+    inset 0 0 5px #63b3ed;
+}
+
+.pixel-glow-green {
+  box-shadow: 
+    0 0 5px #48bb78,
+    0 0 10px #48bb78,
+    0 0 15px #48bb78,
+    inset 0 0 5px #68d391;
+}
+
+.pixel-glow-red {
+  box-shadow: 
+    0 0 5px #f56565,
+    0 0 10px #f56565,
+    0 0 15px #f56565,
+    inset 0 0 5px #fc8181;
+}
+
+/* Disable smooth transitions for authentic pixel feel */
+*, *::before, *::after {
+  transition: none !important;
+  animation-duration: 0s !important;
+  animation-delay: 0s !important;
+}
+
+/* Re-enable specific animations we want */
+.pixel-fade-in {
+  animation: pixelFadeIn 0.3s steps(3, end);
+}
+
+@keyframes pixelFadeIn {
+  0% { opacity: 0; }
+  33% { opacity: 0.33; }
+  66% { opacity: 0.66; }
+  100% { opacity: 1; }
+}
+
+.pixel-pulse {
+  animation: pixelPulse 1s steps(4, end) infinite;
+}
+
+@keyframes pixelPulse {
+  0%, 100% { opacity: 1; }
+  25% { opacity: 0.8; }
+  50% { opacity: 0.6; }
+  75% { opacity: 0.8; }
+}
+
+/* Scanline effect for authentic CRT feel */
+.scanlines::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    transparent 0%,
+    rgba(0, 255, 0, 0.03) 50%,
+    transparent 100%
+  );
+  background-size: 100% 4px;
+  pointer-events: none;
+  z-index: 1000;
+}
